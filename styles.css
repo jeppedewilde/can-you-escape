@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+/* header {
+  display: inline-flex;
+} */
+
+body {
+  background-color: black;
+}
+
+.room {
+  background-image: url(../images/room2.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  min-height: 100vh;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  font-size: 5em;
+}
+
+.modal img {
+  max-width: 20vw;
+  max-height: 20vh;
+}
+
+.modal-container {
+  position: fixed;
+  pointer-events: none;
+  display: none;
+  background-color: white;
+}
+
+.modal-container.show {
+  display: block;
+  pointer-events: auto;
+}
+
+#lamp {
+  max-width: 10vw;
+  max-height: 20vh;
+}

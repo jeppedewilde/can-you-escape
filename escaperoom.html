@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="java.js" defer></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Escape room</title>
+</head>
+<body class="room">
+<header>
+  <a id="back" href="index.html">Back</a>
+  <div>
+    <h1 id="seconds">10</h1>
+  </div>
+</header>
+
+  <img id="lock1" src="images/slot1.jpg" alt="black lock">
+  <div class="modal-container" id="modalLock1">
+    <div class="modal">
+      <label for="passwordCheck">Do you know the password?</label>
+      <input id="passwordCheck" type="text" name="password">
+      <button id="enterPassword">Check password</button>
+      <button id="closeLock1">X</button>
+      <p id="feedbackPassword"></p>
+    </div>
+  </div>
+
+  <img id="lock2" src="images/slot1.jpg" alt="black lock">
+  <div class="modal-container" id="modalLock2">
+    <div class="modal">
+      <label for="codeCheck">Do you know the code?</label>
+      <input id="codeCheck" type="text" name="code">
+      <button id="enterCode">Check code</button>
+      <button id="closeLock2">X</button>
+      <p id="feedbackCode"></p>
+    </div>
+  </div>
+
+  <button id="books">books</button>
+  <div class="modal-container" id="modalBooks">
+    <div class="modal">
+      <img src="images/books-try-1.webp" alt="books">
+      <p>Think hard...</p>
+      <button id="closeBooks">X</button>
+    </div>
+  </div>
+
+  <button id="paper">paper</button>
+  <div class="modal-container" id="modalPaper">
+    <div class="modal">
+      <img src="images/paper-code-try-1.jpeg" alt="paper">
+      <p>Remember this...</p>
+      <button id="closePaper">X</button>
+    </div>
+  </div>
+
+  <button id="key">key</button>
+  <div class="modal-container" id="modalKey">
+    <div class="modal">
+      <img src="images/key-try-1.jpeg" alt="key">
+      <p>Take this with you...</p>
+      <button id="closeKey">X</button>
+    </div>
+  </div>
+
+  <!-- <img id="lightsOff" src="images/lights-off.jpg" alt="lights are off">
+  <div class="modal-container" id="modalLightsOff">
+    <div class="modal">
+      <img src="images/lights-on.jpeg" alt="">
+      <p id="feedbackPassword"></p>
+    </div>
+  </div> -->
+
+<a id="game-over" href="gameover.html">Game over</a>
+</body>
+</html>
