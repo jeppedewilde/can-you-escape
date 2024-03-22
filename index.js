@@ -104,7 +104,7 @@ window.addEventListener('mouseup', () => {
 // bron achtergrond geluid: https://forum.freecodecamp.org/t/how-to-play-mp3-in-the-background-music-automatically/308554
 window.addEventListener("DOMContentLoaded", event => {
     const backgroundMusic = document.querySelector("#backgroundMusic");
-    backgroundMusic.volume = 0.2;
+    backgroundMusic.volume = 0.6;
     backgroundMusic.play();
 })
 
