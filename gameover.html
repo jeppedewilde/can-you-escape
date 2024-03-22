@@ -3,12 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="java.js" defer></script>
+    <script src="index.js" defer></script>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="website icon" href="images/doorknob.svg">
     <title>Escape room</title>
 </head>
 <body>
-    <h1>GAME OVER!</h1>
-    <a href="index.html">Try again</a>
+    <div class="grid-container">
+        <div class="item1">    
+            <h1>GAME OVER!</h1>
+        </div>
+        <div class="item2">
+            <a id="backToStartButton" href="index.html">Back to start</a>
+        </div>
+        <div class="item4">
+            <p>Text about losing the game</p>
+        </div>
+    </div>
+    <audio id="gameOverMusic" autoplay src="audio/gameover_music1.mp3"></audio>
 </body>
 </html>

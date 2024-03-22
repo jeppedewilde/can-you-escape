@@ -3,17 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="java.js" defer></script>
+    <script src="index.js" defer></script>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="website icon" href="images/doorknob.svg">
     <title>Escape room</title>
 </head>
 <body class="room">
 <header>
-  <a id="back" href="index.html">Back</a>
+  <a id="exit" href="index.html">EXIT</a>
   <div>
     <h1 id="seconds">10</h1>
   </div>
+  <img id="soundIcon" src="images/sound-ff.svg" alt="">
 </header>
+
+  <img id="door" src="images/doorknob.svg" alt="doorknob">
+  <div class="modal-container" id="modalDoor">
+    <div class="modal">
+      <p id="feedbackDoor"></p>
+      <button id="openDoor">Open door</button>
+      <button id="closeDoor">X</button>
+    </div>
+  </div>
 
   <img id="lock1" src="images/slot1.jpg" alt="black lock">
   <div class="modal-container" id="modalLock1">
@@ -37,41 +48,39 @@
     </div>
   </div>
 
-  <button id="books">books</button>
+  <img id="books" src="images/books-position.svg" alt="books">
   <div class="modal-container" id="modalBooks">
     <div class="modal">
-      <img src="images/books-try-1.webp" alt="books">
+      <img src="images/books-position.svg" alt="books">
       <p>Think hard...</p>
       <button id="closeBooks">X</button>
     </div>
   </div>
 
-  <button id="paper">paper</button>
+  <img id="paper" src="images/paper-position.svg" alt="piece of paper">
   <div class="modal-container" id="modalPaper">
     <div class="modal">
-      <img src="images/paper-code-try-1.jpeg" alt="paper">
+      <img src="images/paper-empty.svg" alt="paper">
+      <p id="showRandomCode"></p>
       <p>Remember this...</p>
       <button id="closePaper">X</button>
     </div>
   </div>
 
-  <button id="key">key</button>
+  <img id="key" src="images/key.svg" alt="key">
   <div class="modal-container" id="modalKey">
     <div class="modal">
-      <img src="images/key-try-1.jpeg" alt="key">
-      <p>Take this with you...</p>
+      <img src="images/key.svg" alt="key">
+      <p>You found the key! You hereby opened one of the 3 locks!</p>
       <button id="closeKey">X</button>
     </div>
   </div>
 
-  <!-- <img id="lightsOff" src="images/lights-off.jpg" alt="lights are off">
-  <div class="modal-container" id="modalLightsOff">
-    <div class="modal">
-      <img src="images/lights-on.jpeg" alt="">
-      <p id="feedbackPassword"></p>
-    </div>
-  </div> -->
+  <img id="lamp" src="images/lamp-off.svg" alt="lamp">
 
-<a id="game-over" href="gameover.html">Game over</a>
+  <div class="cursor"></div>
+  <audio id="backgroundMusic" audioplay loop src="audio/background_music1.mp3"></audio>
+  <!-- <audio id="doorOpeningMusic" src="audio/deuropen_music1.mp3"></audio> -->
+
 </body>
 </html>
