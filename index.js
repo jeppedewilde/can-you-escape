@@ -1,7 +1,7 @@
 const cursor = document.querySelector(".cursor");
 
 const tijdDisplay = document.querySelector("#seconds");
-let secondsPassed = 10;
+let secondsPassed = 180;
 let timer = setInterval(countSeconds, 1000);
 
 const game_over = document.querySelector("game-over");
@@ -26,7 +26,7 @@ const closeLock2 = document.querySelector("#closeLock2");
 const enterCode = document.querySelector("#enterCode");
 let feedbackCode = document.querySelector("#feedbackCode");
 let inputCode;
-const randomCodeLijst = ['1234', '2334', '4567', '6789'];
+const randomCodeLijst = ['5839', '0922', '7396', '1741'];
 const randomCodeIndex = Math.floor(Math.random() * 4);
 const gekozenRandomCode = randomCodeLijst[randomCodeIndex];
 const correctCode = gekozenRandomCode;
@@ -59,22 +59,6 @@ const lightSwitchMusic = new Audio('audio/lightswitch_music1.mp3');
 const doorIsLockedMusic = new Audio('audio/doorislocked_music1.mp3');
 const paperRustlingMusic = new Audio('audio/paperrustling_music1.mp3')
 
-let soundIcon = document.querySelector("#soundIcon");
-
-function soundButton(){
-    console.log("geluid doet het opeens niet meer???")
-    if (startScreenMusic.paused){
-        startScreenMusic.volume = 0.2;
-        startScreenMusic.play();
-        soundIcon.src = "images/sound-ff.svg";
-    } else {
-        startScreenMusic.pause();
-        soundIcon.src = "images/sound-on.svg";
-    }
-}
-
-soundIcon.addEventListener('click', soundButton);
-
 function lampLight(){
     if (lampAan){
         lamp.src = "images/lamp-off.svg";
@@ -89,6 +73,7 @@ function lampLight(){
 
 lamp.addEventListener('click', lampLight);
 
+// Jack heeft mij geholpen met de code voor de cursor
 window.addEventListener('mousemove', e => {
     cursor.style.top = e.pageY + 'px'
     cursor.style.left = e.pageX + 'px'
@@ -109,6 +94,8 @@ window.addEventListener("DOMContentLoaded", event => {
     backgroundMusic.play();
 })
 
+
+// bron modal popups: https://www.freecodecamp.org/news/how-to-build-a-modal-with-javascript/
 door.addEventListener('click', () => {
     modalDoor.classList.add('show');
     if (inputCode == correctCode && inputPassword == correctPassword && keyClicked){
@@ -217,7 +204,6 @@ function countSeconds(){
     tijdDisplay.textContent = secondsPassed;
     secondsPassed -= 1;
     if (secondsPassed == 0){
-        tijdDisplay.textContent = "Helaas, de tijd is om.";
         stopCountingTime();
         gameOver();
     }
