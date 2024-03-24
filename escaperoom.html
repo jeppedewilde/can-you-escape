@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="index.js" defer></script>
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="website icon" href="images/doorknob.svg">
+    <link rel="website icon" href="images/website-icon.svg">
     <title>Escape room</title>
 </head>
 <body class="room">
@@ -29,9 +29,11 @@
   <img id="lock1" src="images/slot1.jpg" alt="black lock">
   <div class="modal-container" id="modalLock1">
     <div class="modal">
-      <label for="passwordCheck">Do you know the password?</label>
-      <input id="passwordCheck" type="text" name="password">
-      <button id="enterPassword">Check password</button>
+      <label id="labelPassword" for="passwordCheck">Do you know the password?</label>
+      <div class="inputFieldPosition">
+        <input id="passwordCheck" type="text" name="password">
+        <button id="enterPassword">Check password</button>
+      </div>
       <button id="closeLock1">X</button>
       <p id="feedbackPassword"></p>
     </div>
@@ -40,19 +42,21 @@
   <img id="lock2" src="images/slot1.jpg" alt="black lock">
   <div class="modal-container" id="modalLock2">
     <div class="modal">
-      <label for="codeCheck">Do you know the code?</label>
-      <input id="codeCheck" type="text" name="code">
-      <button id="enterCode">Check code</button>
+      <label id="labelCode" for="codeCheck">Do you know the code?</label>
+      <div class="inputFieldPosition">
+        <input id="codeCheck" type="text" name="code">
+        <button id="enterCode">Check code</button>
+      </div>
       <button id="closeLock2">X</button>
       <p id="feedbackCode"></p>
     </div>
   </div>
 
-  <img id="books" src="images/books-position.svg" alt="books">
+  <img id="books" src="images/books-position-3.svg" alt="books">
   <div class="modal-container" id="modalBooks">
     <div class="modal">
-      <img src="images/books-position.svg" alt="books">
-      <p>Think hard...</p>
+      <img src="images/books-modal.svg" alt="books">
+      <p>Think hard... Can you find clues to form a word here?</p>
       <button id="closeBooks">X</button>
     </div>
   </div>
@@ -64,7 +68,7 @@
           <img src="images/paper-empty.svg" alt="paper">
           <p id="showRandomCode"></p>
         </div>
-      <p>Remember this...</p>
+      <p>I would remember those numbers if i were you...</p>
       <button id="closePaper">X</button>
     </div>
   </div>
@@ -73,7 +77,7 @@
   <div class="modal-container" id="modalKey">
     <div class="modal">
       <img src="images/key.svg" alt="key">
-      <p>You found the key! You hereby opened one of the 3 locks!</p>
+      <p>You found the key! You hereby opened the key lock!</p>
       <button id="closeKey">X</button>
     </div>
   </div>
@@ -82,7 +86,6 @@
 
   <div class="cursor"></div>
   <audio id="backgroundMusic" audioplay loop src="audio/background_music1.mp3"></audio>
-  <!-- <audio id="doorOpeningMusic" src="audio/deuropen_music1.mp3"></audio> -->
 
 </body>
 </html>

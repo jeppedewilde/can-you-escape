@@ -18,7 +18,7 @@ const closeLock1 = document.querySelector("#closeLock1");
 const enterPassword = document.querySelector("#enterPassword");
 let feedbackPassword = document.querySelector("#feedbackPassword");
 let inputPassword;
-const correctPassword = "123";
+const correctPassword = "minutes";
 
 const lock2 = document.querySelector("#lock2");
 const modalLock2 = document.querySelector("#modalLock2");
@@ -62,6 +62,7 @@ const paperRustlingMusic = new Audio('audio/paperrustling_music1.mp3')
 let soundIcon = document.querySelector("#soundIcon");
 
 function soundButton(){
+    console.log("geluid doet het opeens niet meer???")
     if (startScreenMusic.paused){
         startScreenMusic.volume = 0.2;
         startScreenMusic.play();
@@ -159,7 +160,7 @@ enterPassword.addEventListener('click', () => {
         feedbackPassword.textContent = "Yes, correct password!"
         correctAnswerMusic.play();
     } else{
-        feedbackPassword.textContent = "Wrong answer..."
+        feedbackPassword.textContent = "Wrong answer... Hint: There are no capitals in the password!"
         wrongAnswerMusic.play();
     }
 })
@@ -218,7 +219,7 @@ function countSeconds(){
     if (secondsPassed == 0){
         tijdDisplay.textContent = "Helaas, de tijd is om.";
         stopCountingTime();
-        // gameOver();
+        gameOver();
     }
 }
 
